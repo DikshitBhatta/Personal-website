@@ -25,10 +25,10 @@ PROJECT_ROOT = BASE_DIR / 'Personal-website'       # Define the root path specif
 SECRET_KEY = 'django-insecure-4285t@i_1c07fft24glnklct3pwx5bu$&sm%0*fj=fj#+xcvh@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-# ALLOWED_HOSTS = ['personal-website-xc3s.onrender.com','127.0.0.1','www.gaurabbadu.com.np']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['personal-website-xc3s.onrender.com']
+# ,'127.0.0.1','www.gaurabbadu.com.np'
 
 
 
