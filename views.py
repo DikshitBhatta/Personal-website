@@ -10,7 +10,7 @@ def About(request):
     return render(request, 'about.html')
 
 def Experience(request):
-    return render(request, 'experience.html')
+    return render(request, 'Experience.html')
 
 def Projects(request):
     return render(request, 'projects.html')

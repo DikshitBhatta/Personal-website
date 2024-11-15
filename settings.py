@@ -13,7 +13,9 @@ import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent  # Adjusted to ensure it's two levels up from `settings.py`
+PROJECT_ROOT = BASE_DIR / 'Personal-website'       # Define the root path specifically for your project directory
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4285t@i_1c07fft24glnklct3pwx5bu$&sm%0*fj=fj#+xcvh@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['www.gaurabbadu.com.np']
 
 
 
@@ -51,13 +53,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'new.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'calc', 'templates')],
+        'DIRS': [PROJECT_ROOT / 'templates'],       # Reference `PROJECT_ROOT` here
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +71,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'new.wsgi.application'
+
+print("Templates Directory:", BASE_DIR / 'templates')
+
+
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
