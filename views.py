@@ -14,3 +14,6 @@ def Experience(request):
 
 def Projects(request):
     return render(request, 'projects.html')
+
+def header(request):
+    return render(request, 'header.html')
