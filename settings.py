@@ -25,9 +25,9 @@ PROJECT_ROOT = BASE_DIR / 'Personal-website'       # Define the root path specif
 SECRET_KEY = 'django-insecure-4285t@i_1c07fft24glnklct3pwx5bu$&sm%0*fj=fj#+xcvh@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['personal-website-xc3s.onrender.com']
+ALLOWED_HOSTS = ['personal-website-xc3s.onrender.com','127.0.0.1']
 # ,'127.0.0.1','www.gaurabbadu.com.np'
 
 
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/opt/render/project/templates'],       # Reference `PROJECT_ROOT` here
+        'DIRS': [PROJECT_ROOT / 'templates'],       # Reference `PROJECT_ROOT` here
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
