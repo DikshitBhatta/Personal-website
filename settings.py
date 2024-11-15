@@ -73,7 +73,7 @@ TEMPLATES = [
 ]
 
 
-print("Templates Directory:", BASE_DIR / 'templates')
+print("Templates Directory:", PROJECT_ROOT/ 'templates')
 
 
 WSGI_APPLICATION = 'wsgi.application'
